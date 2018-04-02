@@ -1,3 +1,6 @@
+import { MedicoComponent } from './medicos/medico.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
 import { ProfileComponent } from './profile/profile.component';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -31,6 +34,9 @@ const pagesRoutes: Routes = [
 
     // Mantenimientos
     {path: 'usuarios', component: UsuariosComponent, data: {titulo: 'Mantenimiento de usuarios'}},
+    {path: 'hospitales', component: HospitalesComponent, data: {titulo: 'Mantenimiento de hospitales'}},
+    {path: 'medicos', component: MedicosComponent, data: {titulo: 'Mantenimiento de médicos'}},
+    {path: 'medico/:id', component: MedicoComponent, data: {titulo: 'Actualizar médico'}},
     {path: '', redirectTo: '/dashboard' , pathMatch: 'full'}
   ]
 }
